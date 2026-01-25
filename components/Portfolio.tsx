@@ -68,12 +68,12 @@ export default function Portfolio() {
     };
 
     return (
-        <section id="portfolio" className="py-24 bg-white">
+        <section id="portfolio" className="py-16 sm:py-20 lg:py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
+                <div className="text-center mb-12 sm:mb-16">
                     <span className="text-amber-500 font-semibold tracking-wider uppercase">Our Work</span>
-                    <h2 className="mt-2 text-4xl font-bold text-gray-900">Featured Projects</h2>
-                    <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
+                    <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-gray-900">Featured Projects</h2>
+                    <p className="mt-4 text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
                         A showcase of our commitment to quality, innovation, and design excellence in Tetouan and the grand north.
                     </p>
                 </div>

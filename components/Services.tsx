@@ -25,17 +25,17 @@ export default function Services() {
     ];
 
     return (
-        <section id="services" className="py-24 bg-gray-50">
+        <section id="services" className="py-16 sm:py-20 lg:py-24 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
+                <div className="text-center mb-12 sm:mb-16">
                     <span className="text-amber-500 font-semibold tracking-wider uppercase">Our Expertise</span>
-                    <h2 className="mt-2 text-4xl font-bold text-gray-900">Comprehensive Construction Services</h2>
-                    <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
+                    <h2 className="mt-2 text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900">Comprehensive Construction Services</h2>
+                    <p className="mt-4 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
                         We deliver excellence across a wide range of construction disciplines, tailored to meet your unique needs.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                     {services.map((service, index) => (
                         <div
                             key={index}
