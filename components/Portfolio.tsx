@@ -6,32 +6,32 @@ export default function Portfolio() {
         {
             title: 'Villa Al-Andalus',
             category: 'Residential',
-            image: '/portfolio1.png'
+            image: '/villa.png'
         },
         {
             title: 'Tetouan Tech Hub',
             category: 'Commercial',
-            image: '/portfolio1.png'
+            image: '/tech-hub.png'
         },
         {
             title: 'Marina Complex',
             category: 'Renovation',
-            image: '/portfolio1.png'
+            image: '/marina.png'
         },
         {
             title: 'Royal Resort',
             category: 'Hospitality',
-            image: '/portfolio1.png'
+            image: '/resort.png'
         },
         {
             title: 'Green Valley Apartments',
             category: 'Residential',
-            image: '/portfolio1.png'
+            image: '/villa.png'
         },
         {
             title: 'City Center Mall',
             category: 'Commercial',
-            image: '/portfolio1.png'
+            image: '/hero.png'
         }
     ];
 
