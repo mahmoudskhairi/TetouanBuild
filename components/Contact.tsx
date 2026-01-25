@@ -43,10 +43,10 @@ export default function Contact() {
             // Reset success message after 5 seconds
             setTimeout(() => setStatus('idle'), 5000);
 
-        } catch (error: any) {
+        } catch (error) {
             console.error('Submission error:', error);
             setStatus('error');
-            setErrorMessage(error.message);
+            setErrorMessage(error instanceof Error ? error.message : 'Something went wrong');
         }
     };
 
