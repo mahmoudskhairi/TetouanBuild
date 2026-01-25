@@ -1,7 +1,12 @@
+'use client';
+
 import Image from 'next/image';
-import { Plus } from 'lucide-react';
+import { Plus, ArrowDown, ArrowUp } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Portfolio() {
+    const [visibleCount, setVisibleCount] = useState(6);
+
     const projects = [
         {
             title: 'Villa Al-Andalus',
@@ -32,8 +37,35 @@ export default function Portfolio() {
             title: 'City Center Mall',
             category: 'Commercial',
             image: '/hero.png'
+        },
+        // Additional projects for demonstration
+        {
+            title: 'Martil Seaside Hotel',
+            category: 'Hospitality',
+            image: '/marina.png'
+        },
+        {
+            title: 'Fnideq Logistics Center',
+            category: 'Industrial',
+            image: '/tech-hub.png'
+        },
+        {
+            title: 'Cabo Negro Private Villa',
+            category: 'Residential',
+            image: '/resort.png'
         }
     ];
+
+    const handleToggle = () => {
+        if (visibleCount < projects.length) {
+            setVisibleCount(projects.length);
+        } else {
+            setVisibleCount(6);
+            // Optional: Scroll back to top of portfolio section
+            const section = document.getElementById('portfolio');
+            section?.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <section id="portfolio" className="py-24 bg-white">
@@ -47,8 +79,8 @@ export default function Portfolio() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
-                        <div key={index} className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer">
+                    {projects.slice(0, visibleCount).map((project, index) => (
+                        <div key={index} className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer animate-in fade-in zoom-in duration-500">
                             <Image
                                 src={project.image}
                                 alt={project.title}
@@ -71,8 +103,19 @@ export default function Portfolio() {
                 </div>
 
                 <div className="mt-16 text-center">
-                    <button className="px-8 py-4 border-2 border-gray-900 text-gray-900 rounded-full font-bold hover:bg-gray-900 hover:text-white transition-all duration-300">
-                        View All Projects
+                    <button
+                        onClick={handleToggle}
+                        className="group inline-flex items-center gap-2 px-8 py-4 border-2 border-gray-900 text-gray-900 rounded-full font-bold hover:bg-gray-900 hover:text-white transition-all duration-300"
+                    >
+                        {visibleCount < projects.length ? (
+                            <>
+                                View More Projects <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+                            </>
+                        ) : (
+                            <>
+                                Show Less <ArrowUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
+                            </>
+                        )}
                     </button>
                 </div>
             </div>
