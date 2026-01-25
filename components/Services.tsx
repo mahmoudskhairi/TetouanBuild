@@ -5,22 +5,22 @@ export default function Services() {
         {
             title: 'Residential Construction',
             description: 'Building dream homes from the ground up with precision, quality materials, and personalized design to match your lifestyle.',
-            icon: <Home className="w-12 h-12 text-amber-500 mb-4" />,
+            icon: <Home className="w-12 h-12" />,
         },
         {
             title: 'Renovation & Remodeling',
             description: 'Transforming existing spaces into modern, functional environments. Kitchens, bathrooms, and complete home makeovers.',
-            icon: <Hammer className="w-12 h-12 text-amber-500 mb-4" />,
+            icon: <Hammer className="w-12 h-12" />,
         },
         {
             title: 'Commercial Construction',
             description: 'Reliable construction solutions for offices, retail spaces, and industrial facilities, delivered on time and within budget.',
-            icon: <Building2 className="w-12 h-12 text-amber-500 mb-4" />,
+            icon: <Building2 className="w-12 h-12" />,
         },
         {
             title: 'Structural Works',
             description: 'Expert structural engineering and concrete works ensuring safety, stability, and longevity for every project.',
-            icon: <Ruler className="w-12 h-12 text-amber-500 mb-4" />,
+            icon: <Ruler className="w-12 h-12" />,
         },
     ];
 
@@ -41,10 +41,8 @@ export default function Services() {
                             key={index}
                             className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group"
                         >
-                            <div className="bg-amber-50 rounded-2xl w-20 h-20 flex items-center justify-center mb-6 group-hover:bg-amber-500 transition-colors duration-300">
-                                <div className="group-hover:text-white transition-colors duration-300">
-                                    {service.icon}
-                                </div>
+                            <div className="bg-amber-50 rounded-2xl w-20 h-20 flex items-center justify-center mb-6 group-hover:bg-amber-500 transition-all duration-300 text-amber-500 group-hover:text-white">
+                                {service.icon}
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                             <p className="text-gray-600 leading-relaxed">
